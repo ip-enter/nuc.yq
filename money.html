@@ -11,6 +11,36 @@
  
 <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+
+
+<script>
+function calc(){
+	//获取存款金额
+	var cunkuanjinge=document.getElementById("amount").value;
+	var cunkuannum=parseInt(cunkuanjinge);
+	//开始计算
+	var lilv=document.getElementById("year").value;
+	var lixi=cunkuannum*lilv;
+	var total=cunkuannum+lixi;
+	//写入文本框
+	document.getElementById("lixi").value=lixi;
+	document.getElementById("total").value=total;
+	
+	
+	
+	
+}
+	
+	
+	
+	
+</script>
+
+
+
+
+
 	</head>
 	<body>
 		<div class="container text-center">
@@ -42,7 +72,7 @@
 			
 			<tr>
 				<td>所得利息</td>
-				<td><input type="text" class="form-control" readonly="readonly" ></td>
+				<td><input type="text" id="lixi" class="form-control" readonly="readonly" ></td>
 			</tr>
 			<tr>
 				<td>本息合计</td>
@@ -52,7 +82,7 @@
 			</tr>
 			
 		<tr>
-			<td colspan="2"><button class="btn btn-primary btn-block">计算</button></td>
+			<td colspan="2"><button onclick="calc()" class="btn btn-primary btn-block">计算</button></td>
 			</tr>
 		</table>
 		开发者：1913040422 杨强 中北大学软件学院2020
